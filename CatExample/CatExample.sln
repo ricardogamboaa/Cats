@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatExample", "CatExample.csproj", "{F175706B-AF63-40C9-8CFA-C4B57C111B73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsAPI", "..\CatsAPI\CatsAPI.csproj", "{62D7FBB5-121F-4EE7-845F-E5E86D97EADC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatsAPI", "..\CatsAPI\CatsAPI.csproj", "{62D7FBB5-121F-4EE7-845F-E5E86D97EADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "..\Repository\Repository.csproj", "{0DA956AD-C2E7-4626-A78A-DFF7981C7AE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{62D7FBB5-121F-4EE7-845F-E5E86D97EADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62D7FBB5-121F-4EE7-845F-E5E86D97EADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62D7FBB5-121F-4EE7-845F-E5E86D97EADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DA956AD-C2E7-4626-A78A-DFF7981C7AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA956AD-C2E7-4626-A78A-DFF7981C7AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA956AD-C2E7-4626-A78A-DFF7981C7AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA956AD-C2E7-4626-A78A-DFF7981C7AE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "j13aKRSEdiVsMHjSICc90FncuT4JHbW4fzqnSTI1c7vVREUwD70SpNToZkX37wMhg8asZY0VxB9JuCLTs5t8EQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NVICRLAP24\\Documents\\GitHub\\Cats\\Repository\\Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NVICRLAP24\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "36SNIWsLf3F1496BSUXNWoJxjhFTMc0/AfCfVjhfdMphqKm+qI0ZMkZgIjdLjqv3tVRQXcPFiro7k822/FWP1g==",
+  "dgSpecHash": "9sDoZFDbuLGEhujA8Shp3WDpFdOTXMxEWJYYPHDqBPKgoL+Ycy5o1ONwYLV44XTU3ilXI9rvXThBxywoQJ7GbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NVICRLAP24\\source\\repos\\Cat\\CatsAPI\\CatsAPI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\NVICRLAP24\\Documents\\GitHub\\Cats\\CatsAPI\\CatsAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NVICRLAP24\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

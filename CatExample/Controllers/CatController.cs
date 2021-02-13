@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using CatExample.Models;
-using CatExample.Repository;
-using ApiController = CatsAPI.Controllers;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Api = CatsAPI.Controllers;
+using Newtonsoft.Json;
 
 namespace CatExample.Controllers
 {
@@ -14,21 +10,21 @@ namespace CatExample.Controllers
     {
         public CatController()
         {
-            repository = new CatRepository(new ApiController.CatController());
+            request = new Api.CatController();
         }
 
-        private CatRepository repository;
+        private Api.CatController request;
 
         // GET: CatController
         public ActionResult Index()
         {
-            return View(repository.GetCats());
+            return View(JsonConvert.DeserializeObject<List<Cat>>(request.GetCats()));
         }
 
         // GET: CatController/Details/5
         public ActionResult Details(string name)
         {
-            return View(repository.GetCatByName(name));
+            return View(JsonConvert.DeserializeObject<Cat>(request.GetCatByName(name)));
         }
 
         // GET: CatController/Create
@@ -42,14 +38,14 @@ namespace CatExample.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Cat cat)
         {
-            repository.AddCat(cat);
+            request.AddCat(JsonConvert.SerializeObject(cat));
             return RedirectToAction(nameof(Index));
         }
 
         // GET: CatController/Edit/5
         public ActionResult Edit(string name)
         {
-            return View(repository.GetCatByName(name));
+            return View(JsonConvert.DeserializeObject<Cat>(request.GetCatByName(name)));
         }
 
         // POST: CatController/Edit/5
@@ -57,22 +53,23 @@ namespace CatExample.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Cat cat)
         {
-            repository.EditCat(cat);
+            request.EditCat(JsonConvert.SerializeObject(cat));
             return RedirectToAction(nameof(Index));
         }
 
         // GET: CatController/Delete/5
         public ActionResult Delete(string name)
         {
-            return View(repository.GetCatByName(name));
+            return View(JsonConvert.DeserializeObject<Cat>(request.GetCatByName(name)));
         }
 
         // POST: CatController/Delete/5
         [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(string name, Cat cat)
+        public ActionResult DeletePost(string name)
         {
-            repository.RemoveCat(name);
+            request.RemoveCat(name);
             return RedirectToAction(nameof(Index));
         }
     }
